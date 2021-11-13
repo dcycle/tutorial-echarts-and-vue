@@ -5,6 +5,7 @@ Vue.js and e-charts
 
 [Apache E-charts](https://echarts.apache.org/en/index.html) is a charting library.
 
+[See a working example here](https://dcycle.github.io/tutorial-echarts-and-vue/).
 
 Resources
 -----

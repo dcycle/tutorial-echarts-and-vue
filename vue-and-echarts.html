@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Vue.js and Echarts - Vue and echarts</title>
+  </head>
+  <body>
+    <p><a href="index.html">Home</a> &gt;</p>
+    <h1>Vue.js and Echarts - Vue and echarts</h1>
+    <div id="app">
+      <h1>{{ greeting }}</h1>
+      <ul>
+        <li>
+          To learn more about Vue, visit
+          <a :href="docsUrl" target="_blank">
+            {{ label }}
+          </a>
+        </li>
+      </ul>
+      <div id="main" style="width:600px; height:400px;"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.2.2/echarts.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="my-echarts.js"></script>
+    <script src="my-vue.js"></script>
+  </body>
+</html>
