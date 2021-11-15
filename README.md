@@ -12,3 +12,4 @@ Resources
 
 * https://stackoverflow.com/questions/69248971/vue-vue-echarts-not-rendered
 * https://www.youtube.com/watch?v=M7Zob8f0biA
+* https://vue-chartjs.org/guide/#examples
