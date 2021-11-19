@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Vue.js, echarts and vue router</title>
+  </head>
+  <body>
+    <p><a href="index.html">Home</a> &gt;</p>
+    <h1>Vue.js, echarts and vue router</h1>
+    <div id="app">
+      <ul>
+        <li><router-link to="/">Line chart</router-link></li>
+        <li><router-link to="/bar-chart">Bar chart</router-link></li>
+      </ul>
+      <div>
+        <h1>{{ greeting }}</h1>
+        <router-view></router-view>
+        <ul>
+          <li>
+            To learn more about Vue, visit
+            <a :href="docsUrl" target="_blank">
+              {{ label }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.2.2/echarts.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <script src="my-echarts.js"></script>
+    <script src="my-vue-router.js"></script>
+  </body>
+</html>
