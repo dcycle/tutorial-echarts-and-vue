@@ -50,6 +50,6 @@ const vueApp = Vue.createApp({
   }
 });
 
-vueApp.use(router)
+vueApp.use(router);
 
 vueApp.mount('#app')

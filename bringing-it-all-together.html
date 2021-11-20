@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bringing it all together</title>
+    <link rel="stylesheet" href="bringing-it-all-together.css">
+  </head>
+  <body>
+    <p><a href="index.html">Home</a> &gt;</p>
+    <h1>Bringing it all together</h1>
+    <h2>(Vue, router, error handling, echarts, loader, transitions)</h2>
+    <div class="display-before-load">
+      <div class="loader"></div>
+    </div>
+    <div class="display-if-error">
+      <h3>A simulated error occurred. This happens half the time to demonstrate error handling. <a href="bringing-it-all-together.html">Reload the page</a></h3>
+    </div>
+    <div class="display-after-load" id="app">
+      <ul>
+        <li><router-link to="/">Line chart</router-link></li>
+        <li><router-link to="/bar-chart">Bar chart</router-link></li>
+      </ul>
+      <div>
+        <h1>{{ greeting }}</h1>
+
+        <router-view v-slot="{ Component, route }">
+          <!-- Use any custom transition and fallback -->
+          <transition :name="route.meta.transition || 'fade'">
+            <div>
+              <component :is="Component" :key="route.path"/>
+            </div>
+          </transition>
+        </router-view>
+
+        <template><div>
+          <div id="vue-route-home">
+            <h3>This is a line chart</h3>
+            <div class="echart-main" style="width:600px; height:400px;"></div>
+          </div>
+          <div id="vue-route-barchart">
+            <h3>This is a bar chart</h3>
+            <div class="echart-bar-chart" style="width:600px; height:400px;"></div>
+          </div>
+        </div></template>
+
+        <ul>
+          <li>
+            To learn more about Vue, visit
+            <a :href="docsUrl" target="_blank">
+              {{ label }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.2.2/echarts.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <script src="my-echarts.js"></script>
+    <script src="my-vue-router-v3.js"></script>
+    <!-- wait a second to demo our COOL loader -->
+    <script>setTimeout(function() { mountMyApp(); }, 1000);</script>
+  </body>
+</html>
