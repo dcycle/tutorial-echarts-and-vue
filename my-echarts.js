@@ -1,5 +1,19 @@
-const displayChart = function(where, type) {
-  var chartDom = document.getElementById(where);
+/**
+ * Display a chart.
+ *
+ * @param string where
+ *   A class name which may or may not be unique.
+ * @param string type
+ *   A type such as bar or line.
+ * @param string i
+ *   An index which will normally be 0.
+ *
+ * @return
+ *
+ * @throws \Exception
+ */
+const displayChart = function(where, type, i = 0) {
+  var chartDom = document.getElementsByClassName(where)[i];
   var myChart = echarts.init(chartDom);
   var option;
 

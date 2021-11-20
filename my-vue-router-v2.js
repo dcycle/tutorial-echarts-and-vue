@@ -1,11 +1,5 @@
-const LineChart = { template: `
-  <h3>This is a line chart</h3>
-  <div class="echart-main" style="width:600px; height:400px;"></div>
-`}
-const BarChart = { template: `
-  <h3>This is a bar chart</h3>
-  <div class="echart-bar-chart" style="width:600px; height:400px;"></div>
-`}
+const LineChart = { template: '#vue-route-home'}
+const BarChart = { template: '#vue-route-barchart'}
 
 const routes = [
   { path: '/', component: LineChart },
