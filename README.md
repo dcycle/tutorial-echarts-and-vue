@@ -18,3 +18,4 @@ Resources
 * https://vue-chartjs.org/guide/#examples
 * https://www.freecodecamp.org/news/how-to-add-charts-and-graphs-to-a-vue-js-application-29f943a45d09/
 * https://cdnjs.com/libraries/vue-echarts (I don't use this)
+* https://www.youtube.com/watch?v=L77Uq93XXzk

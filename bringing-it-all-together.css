@@ -19,12 +19,14 @@
 }
 
 /* https://blog.logrocket.com/creating-transitions-in-your-vue-app-with-vue-router/ */
+/*transition the opacity when the element enters and leaves the DOM*/
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.35s ease;
+  transition: opacity 0.5s ease-out;
 }
 
+/*set opacity to 0 at element's entrance and exit*/
 .fade-enter-from,
-.fade-leave-active {
+.fade-leave-to {
   opacity: 0;
 }
