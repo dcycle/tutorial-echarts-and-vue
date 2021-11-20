@@ -22,14 +22,7 @@
       <div>
         <h1>{{ greeting }}</h1>
 
-        <router-view v-slot="{ Component, route }">
-          <!-- Use any custom transition and fallback -->
-          <transition :name="route.meta.transition || 'fade'">
-            <div>
-              <component :is="Component" :key="route.path"/>
-            </div>
-          </transition>
-        </router-view>
+        <router-view></router-view>
 
         <template><div>
           <div id="vue-route-home">
