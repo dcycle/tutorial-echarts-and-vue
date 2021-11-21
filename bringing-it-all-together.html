@@ -15,7 +15,7 @@
       <div class="loader"></div>
     </div>
     <div class="display-if-error">
-      <h3>A simulated error occurred. This happens half the time to demonstrate error handling. <a href="bringing-it-all-together.html">Reload the page</a></h3>
+      <h3>Yikes, an error has occurred. Not good. <a href="bringing-it-all-together.html">Reload the page</a></h3>
     </div>
     <div class="display-after-load" id="app">
       <ul>
@@ -67,6 +67,6 @@
     <script src="my-echarts.js"></script>
     <script src="my-vue-router-v3.js"></script>
     <!-- wait a second to demo our COOL loader -->
-    <script>setTimeout(function() { mountMyApp(); }, 1000);</script>
+    <script>setTimeout(function() { MyApp.mount(); }, 1000);</script>
   </body>
 </html>
