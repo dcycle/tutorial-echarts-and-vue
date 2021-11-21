@@ -1,32 +1,6 @@
-.display-after-load,
-.display-if-error {
-  display: none;
+.vue-pane {
+  position: absolute;
 }
-
-/* https://www.w3schools.com/howto/howto_css_loader.asp */
-.loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin .75s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* https://blog.logrocket.com/creating-transitions-in-your-vue-app-with-vue-router/ */
-/*transition the opacity when the element enters and leaves the DOM*/
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease-out;
-}
-
-/*set opacity to 0 at element's entrance and exit*/
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
+.vue-pane-wrapper {
+  position: relative;
 }

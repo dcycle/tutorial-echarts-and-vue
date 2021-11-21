@@ -1,10 +1,7 @@
-mountMyApp = function() {
+mountMyApp = function(options = {}) {
   try {
-    // Simulate an error half the time
-    const simulateErrorIfAbovePointFive = Math.random();
-    console.log('will simulate an error if ' + simulateErrorIfAbovePointFive + ' is above .5');
-    if (simulateErrorIfAbovePointFive > .5) {
-      throw 'simulating an error';
+    if (options.simulateError === true) {
+      throw 'An error has been simulated';
     }
 
     const LineChart = { template: '#vue-route-home'}
@@ -14,12 +11,18 @@ mountMyApp = function() {
       {
         path: '/',
         component: LineChart,
-        meta: { transition: 'fade' },
+        meta: {
+          enterClass: 'animate__animated animate__fadeInLeft',
+          leaveClass: 'animate__animated animate__fadeOutRight',
+        }
       },
       {
         path: '/bar-chart',
         component: BarChart,
-        meta: { transition: 'fade' },
+        meta: {
+          enterClass: 'animate__animated animate__fadeInRight',
+          leaveClass: 'animate__animated animate__fadeOutLeft',
+        }
       },
     ]
 

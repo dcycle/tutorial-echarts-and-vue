@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Vue.js and Echarts - Error simulation</title>
+    <link rel="stylesheet" href="basic-error-handling.css">
+  </head>
+  <body>
+    <div class="display-before-load">
+      <div class="loader"></div>
+    </div>
+    <div class="display-if-error">
+      <h3>A simulated error occurred. This happens half the time to demonstrate error handling. <a href="basic-error-handling.html">Reload the page (although it won't do you too much good)</a></h3>
+    </div>
+    <div class="display-after-load">
+      <p><a href="index.html">Home</a> &gt;</p>
+      <h1>Vue.js and Echarts - Error simulation</h1>
+      <p>Vue.js apps are wrapped in <code>&lt;div id="app"&gt;</code><p>
+      <div id="app">
+        <h1>{{ greeting }}</h1>
+        <ul>
+          <li>
+            To learn more about Vue, visit
+            <a :href="docsUrl" target="_blank">
+              {{ label }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="my-vue.js"></script>
+    <script>mountMyApp({
+      simulateError: true
+    })</script>
+  </body>
+</html>
