@@ -63,11 +63,7 @@ MyApp = {
             docsUrl: "https://v3.vuejs.org"
           };
         }
-      });
-
-      this.vue.use(router);
-
-      this.vue.mount('#app');
+      }).use(router).mount('#app');
 
       this.showHideElements('display-after-load', 'block');
     }
