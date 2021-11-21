@@ -5,8 +5,18 @@ MyApp = {
         throw 'An error has been simulated';
       }
 
-      const LineChart = { template: '#vue-route-home'}
-      const BarChart = { template: '#vue-route-barchart'}
+      const LineChart = {
+        props: [
+          'greeting',
+        ],
+        template: '#vue-route-home'
+      }
+      const BarChart = {
+        props: [
+          'greeting',
+        ],
+        template: '#vue-route-barchart'
+      }
 
       const routes = [
         {

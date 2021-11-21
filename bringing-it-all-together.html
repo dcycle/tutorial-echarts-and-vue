@@ -27,7 +27,10 @@
         <h1>{{ greeting }}</h1>
 
         <div class="vue-pane-wrapper">
-          <router-view v-slot="{ Component, route }">
+          <!-- https://stackoverflow.com/questions/47679547 -->
+          <router-view
+            v-slot="{ Component, route }"
+            :greeting="greeting">
             <!-- See https://www.youtube.com/watch?v=L77Uq93XXzk -->
             <transition
               :enter-active-class="route.meta.enterClass"
@@ -40,13 +43,14 @@
         <template>
           <div id="vue-route-home">
             <div class="vue-pane">
-              <h3>This is a line chart</h3>
+              <!-- In the template, if you output only {{ greeting }}, then Hi there! will become part of the template, and then will lose its binding. Rather, you want to escape {{ greeting }} so it's bound when it's actually used. https://stackoverflow.com/a/63614209/1207752 -->
+              <h3><span v-html="'{{ greeting }}'"></span>, This is a line chart</h3>
               <div class="echart-main" style="width:600px; height:400px;"></div>
             </div>
           </div>
           <div id="vue-route-barchart">
             <div class="vue-pane">
-              <h3>This is a bar chart</h3>
+              <h3><span v-html="'{{ greeting }}'"></span>, This is a bar chart</h3>
               <div class="echart-bar-chart" style="width:600px; height:400px;"></div>
             </div>
           </div>

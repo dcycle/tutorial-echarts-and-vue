@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Vue router only</title>
+  </head>
+  <body>
+    <p><a href="index.html">Home</a> &gt;</p>
+    <h1>Vue router only</h1>
+    <p>Prop allow you to bind variables within the router template, as explained <a href="https://stackoverflow.com/questions/47679547">here</a>.</p>
+    <p>You can type <code>MyApp.vue.greeting = 'yo';</code> in the console to chane the greeting</p>
+    <div id="app">
+      <ul>
+        <li><router-link to="/">Line chart</router-link></li>
+        <li><router-link to="/bar-chart">Bar chart</router-link></li>
+      </ul>
+      <div>
+        <h1>{{ greeting }}</h1>
+        <!-- https://stackoverflow.com/questions/47679547/vue-router-bind-data -->
+        <router-view :greeting="greeting"></router-view>
+        <ul>
+          <li>
+            To learn more about Vue, visit
+            <a :href="docsUrl" target="_blank">
+              {{ label }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <script src="my-vue-router-only.js"></script>
+    <script>MyApp.mount()</script>
+  </body>
+</html>
