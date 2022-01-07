@@ -53,7 +53,7 @@ MyApp = {
           $route() {
             // https://stackoverflow.com/a/64751397/1207752
             this.$nextTick(this.routeLoaded);
-          }
+          },
         },
         methods: {
           // https://stackoverflow.com/a/64751397/1207752
