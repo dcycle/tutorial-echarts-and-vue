@@ -52,7 +52,7 @@
             <div class="vue-pane">
               <!-- In the template, if you output only {{ greeting }}, then Hi there! will become part of the template, and then will lose its binding. Rather, you want to escape {{ greeting }} so it's bound when it's actually used. https://stackoverflow.com/a/63614209/1207752 -->
               <h3><span v-html="'{{ greeting }}'"></span>, This is the route vue-route-home</h3>
-              <input v-model="input_binding" placeholder="edit me" />
+              <input class="my-input-in-route-input_binding" />
               <p>Message inside route vue-route-home is: <span v-html="'{{ input_binding }}'"></span></p>
             </div>
           </div>
@@ -60,7 +60,7 @@
             <div class="vue-pane">
               <!-- We need to escape the binding because otherwise the value will be calculated as part of the template. We need to placeholder itself to be part of the template -->
               <h3><span v-html="'{{ greeting }}'"></span>, This is the route vue-route-barchart</h3>
-              <input v-model="input_binding" placeholder="edit me" />
+              <input class="my-input-in-route-input_binding" />
               <p>Message inside route vue-route-barchart is: <span v-html="'{{ input_binding }}'"></span></p>
             </div>
           </div>
@@ -76,10 +76,9 @@
         </ul>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.2.2/echarts.min.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.6.0.slim.min.js"   integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="   crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://unpkg.com/vue-router@4"></script>
-    <script src="my-echarts.js"></script>
     <script src="my-vue-router-v3-with-input-binding.js"></script>
     <!-- wait a second to demo our COOL loader -->
     <script>setTimeout(function() { MyApp.mount(); }, 1000);</script>

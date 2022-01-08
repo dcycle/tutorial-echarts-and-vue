@@ -54,16 +54,21 @@ MyApp = {
             // https://stackoverflow.com/a/64751397/1207752
             this.$nextTick(this.routeLoaded);
           },
+          input_binding(val) {
+            $('input.my-input-in-route-input_binding').val(val);
+          },
         },
         methods: {
           // https://stackoverflow.com/a/64751397/1207752
           routeLoaded() {
+            $('input.my-input-in-route-input_binding').val(MyApp.vue.input_binding);
+            $('input.my-input-in-route-input_binding').off().on('keyup', function() {
+              MyApp.vue.input_binding = $(this).val();
+            });
             switch (this.$route.path) {
               case '/':
-                displayChart('echart-main', 'line');
                 break;
               case '/bar-chart':
-                displayChart('echart-bar-chart', 'bar');
                 break;
             }
           }
